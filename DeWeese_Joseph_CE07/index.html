@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- BMI Range	Weight Range
+BMI is less than 18.5	Under Weight Range
+BMI is 18.5 up to but not including 24.9	Normal or Healthy Weight Range
+BMI is 24.9 up to but not including 29.9	Over Weight Range
+BMI is 29.9 up to but not including 35 	Obese Range
+BMI is 35 or over	Extreme Obese Range
+
+User Inputs:
+
+Height - Feet
+Height - Inches
+Weight - Lbs
+
+Result To Print Out In H1 Tag:
+
+"Your BMI is X, indicating your weight is in Y for adults of your height."
+Where X is the calculated BMI.
+Where Y is the Weight Range from the table above.
+
+*/
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Body Mass Index Calculator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+       <form >
+        <h1>Body Mass Idex Calculator</h1><br>
+    
+              <br><br>
+        <fieldset> 
+            <legend><h3>Please enter your weight and height.
+                These values will calculate your Body Mass Index (BMI).</h3></legend> 
+       <!--JWD:  USER INPUTS FOR WEIGHT AND HEIGHT -->
+       <label for="heightFeet">Height(ft):  </label><input type="number" id="heightFeet" step="1" min="1" max="13" required>
+       <label for="heightInches">Height(in):  </label><input type="number" id="heightInches" step=".25" min="1" max="11.5" required>
+       <label for="weight">Weight:  </label><input type="number" id="weight" min="0" max="1400" step=".25" required><br><br>
+       
+
+       <!--JWD:  CALCULATION BUTTON FOR BMI RESULT -->
+       <input type="button" id="calcBMI" value="Calculate BMI">
+       <br><br>
+       
+        <img id="bmiGraphic" src="IMG/healthyWeight.jpg" height ="275" style="visibility: hidden";>
+        <br><br>
+         <h1 id="bmiResult"></h1><br>
+         </fieldset>  
+    </form>
+
+
+        <script src="JS/script.js" async defer></script>
+    </body>
+</html>
